@@ -1,0 +1,36 @@
+.container {
+    padding: 30px 20px;
+    position: relative;
+}
+
+.ava {
+    padding-right: 10px;
+}
+
+.name {
+    font-size: 10px;
+    margin-left: 12px;
+    position: absolute;
+    top: 6px;
+    color: #ccc;
+    font-weight: 600;
+    padding: 0 4px;
+}
+
+
+.text {
+    font-size: 14px;
+    padding: 4px 10px;
+    margin-left: 12px;
+    color: #FFF;
+    background-color: #000;
+    border-radius: 15px;
+    border: .2px solid rgb(147, 147, 147);
+    max-width: 300px;
+    display: inline-block;
+}
+
+.time {
+    color: rgb(126, 125, 125);
+    padding: 0 10px;
+}

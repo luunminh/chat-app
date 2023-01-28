@@ -1,0 +1,26 @@
+.lbAddRoom {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.inputAdd {
+    display: block;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+    width: 100%;
+    font-weight: 300;
+    color: rgb(71, 71, 71);
+}
+
+.inputAdd:focus {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #4096ff;
+    ;
+}

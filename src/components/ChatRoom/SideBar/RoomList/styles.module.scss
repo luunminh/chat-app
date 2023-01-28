@@ -1,0 +1,48 @@
+.roomListContainer {
+    background-color: #000;
+}
+
+.container {
+    color: #fff;
+    border: none;
+    // background-color: rgb(86, 180, 220) !important;
+    backdrop-filter: blur(50px);
+
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+
+.item {
+    font-weight: 600;
+    display: block;
+    padding: 10px;
+    color: rgb(235, 233, 233) !important;
+
+}
+
+.item:hover {
+    color: #c76686 !important;
+    border-bottom: 1px solid rgba(215, 155, 175, .5);
+
+}
+
+.addRoomBtn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    color: #FFF;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background: #dc698f;
+    cursor: pointer;
+}
+
+.addRoomBtn:hover {
+    background: #d54575
+}
