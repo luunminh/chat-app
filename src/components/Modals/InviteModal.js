@@ -83,7 +83,7 @@ export default function InviteModal() {
     }
 
     async function fetchUserList(search, curMembers) {
-        return db.collection('users').where('keywords', 'array-contains', search).orderBy('displayName').limit(20).get()
+        return db.collection('users').where('keywords', 'array-contains', search).orderBy('displayName', 'asc').limit(20).get()
             .then(snapshot => {
                 return snapshot.docs.map(doc => ({
                     label: doc.data().displayName,

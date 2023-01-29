@@ -6,12 +6,13 @@ import users from '../../Storage'
 import styles from './style.module.scss';
 import { addDocument, generateWords } from '../../firebase/services'
 const fbProvider = new firebase.auth.FacebookAuthProvider();
+const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 export default function Login() {
 
-    const handleLogin = async (e) => {
+    const handleLogin = async (provider, e) => {
         e.preventDefault();
-        const { additionalUserInfo, user } = await auth.signInWithPopup(fbProvider)
+        const { additionalUserInfo, user } = await auth.signInWithPopup(provider)
         // console.log({ data });
         if (additionalUserInfo.isNewUser) {
             addDocument('users',
@@ -35,9 +36,9 @@ export default function Login() {
             <div className={styles.container}>
                 <h2 className={styles.appTitle}>Chat App</h2>
                 <h2 className={styles.loginTitle}>Đăng nhập</h2>
-                <form action="" className={styles.loginForm}>
-                    <div className={clsx(styles.btnLogin)} onClick={handleLogin}>Đăng nhập bằng Facebook</div>
-                    <div className={clsx(styles.btnLogin)} onClick={handleLogin}>Đăng nhập bằng Google</div>
+                <form className={styles.loginForm}>
+                    <div className={clsx(styles.btnLogin)} onClick={(e) => { handleLogin(fbProvider, e) }}>Đăng nhập bằng Facebook</div>
+                    <div className={clsx(styles.btnLogin)} onClick={(e) => { handleLogin(googleProvider, e) }}>Đăng nhập bằng Google</div>
                 </form>
             </div>
         </div>

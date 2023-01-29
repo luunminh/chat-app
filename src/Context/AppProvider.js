@@ -24,7 +24,7 @@ export default function AppProvider({ children }) {
             operator: 'array-contains',
             compareValue: user.uid,
         };
-    }, [user]);
+    }, [user.uid]);
 
 
     const rooms = useFireStore('rooms', roomsCondition)

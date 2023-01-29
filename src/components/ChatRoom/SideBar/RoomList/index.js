@@ -35,7 +35,7 @@ export default function RoomList() {
                 {rooms.map((room) => (
                     <Typography.Link onClick={() => {
                         setSelectedRoomId(room.id)
-                        console.log(room);
+                        // console.log(room);
                     }} className={styles.item} key={room.id}>{room.name}</Typography.Link>
                 ))}
                 <button onClick={handleAddRoom} className={styles.addRoomBtn}>Thêm phòng</button>

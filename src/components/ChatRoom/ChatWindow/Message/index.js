@@ -28,7 +28,7 @@ export default function Message({ text, displayName, time, img, uid }) {
             <Avatar className={styles.ava} src={img}>{(img) ? '' : displayName.charAt(0).toUpperCase()}</Avatar>
             <Typography.Text className={styles.name}>{displayName}</Typography.Text>
             <Typography.Text className={styles.text}>{text}</Typography.Text>
-            <Typography.Text className={styles.time}>{(time) ? formatDate(time.seconds) : (Date.now.toString())}</Typography.Text>
+            <Typography.Text className={styles.time}>{(time) ? formatDate(time.seconds) : ("")}</Typography.Text>
         </div>
 
     )
