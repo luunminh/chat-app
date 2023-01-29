@@ -1,15 +1,37 @@
-.container {
+.container,
+.container2 {
     padding: 30px 20px;
     position: relative;
+
+}
+
+.container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.container2 {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+
+    .text {
+        border: none;
+        background-color: #606060;
+    }
 }
 
 .ava {
-    padding-right: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .name {
     font-size: 10px;
-    margin-left: 12px;
+    margin-left: 50px;
+    margin-right: 50px;
+
     position: absolute;
     top: 6px;
     color: #ccc;
@@ -21,7 +43,6 @@
 .text {
     font-size: 14px;
     padding: 4px 10px;
-    margin-left: 12px;
     color: #FFF;
     background-color: #000;
     border-radius: 15px;

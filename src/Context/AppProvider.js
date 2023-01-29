@@ -46,7 +46,7 @@ export default function AppProvider({ children }) {
     }, [selectedRoom.members])
 
     const members = useFireStore('users', membersCondition);
-    console.log({ members });
+    // console.log({ members });
 
 
     return (

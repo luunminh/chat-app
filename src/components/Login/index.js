@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import firebase, { auth, db } from '../../firebase/config';
 import users from '../../Storage'
 import styles from './style.module.scss';
-import { addDocument } from '../../firebase/services'
+import { addDocument, generateWords } from '../../firebase/services'
 const fbProvider = new firebase.auth.FacebookAuthProvider();
 
 export default function Login() {
@@ -20,8 +20,9 @@ export default function Login() {
                     email: user.email,
                     photoURL: user.photoURL,
                     uid: user.uid,
-                    providerId: additionalUserInfo.providerId
+                    providerId: additionalUserInfo.providerId,
                     // provider Id : website that we use to login like fb, google,...
+                    keywords: generateWords(user.displayName)
                 }
             )
         }
