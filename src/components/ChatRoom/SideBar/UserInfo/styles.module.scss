@@ -37,10 +37,17 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .userNameText {
+        padding-right: 0;
+    }
 
     .logoutBtn,
     .userNameText {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .logoutBtn {
+        padding: 8px 6px;
     }
 }
