@@ -10,7 +10,7 @@ export default function AddRoomModal() {
     const [roomName, setRoomName] = useState('')
     const [roomDesc, setRoomDesc] = useState('')
     const user = useContext(AuthContext)
-    const { isShowingModal, setIsShowingModal } = useContext(AppContext);
+    const { isShowingModal, setIsShowingModal, setIsSideMenuVisible } = useContext(AppContext);
     const handleCancel = () => {
         setRoomName('');
         setRoomDesc('');
@@ -24,7 +24,7 @@ export default function AddRoomModal() {
         })
 
         setIsShowingModal(false);
-
+        setIsSideMenuVisible(false);
         setRoomName('');
         setRoomDesc('');
 

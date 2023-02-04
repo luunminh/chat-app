@@ -2,12 +2,12 @@
 .container2 {
     padding: 30px 20px;
     position: relative;
-
 }
 
 .container {
     display: flex;
     align-items: center;
+    left: 0px;
 }
 
 .container2 {
@@ -15,6 +15,7 @@
     justify-content: end;
     flex-direction: row-reverse;
     align-items: center;
+    right: 0px;
 
     .text {
         border: none;
@@ -54,4 +55,61 @@
 .time {
     color: rgb(126, 125, 125);
     padding: 0 10px;
+    font-size: 12px;
+}
+
+
+@media (max-width: 1023px) {
+
+    .container,
+    .container2 {
+        padding: 30px 15px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .time {
+        font-size: 10px;
+        position: absolute;
+        bottom: 7px;
+    }
+
+    .text {
+        max-width: 150px;
+        font-size: 12px;
+    }
+
+    .name {
+        margin: 0 8px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .container,
+    .container2 {
+        padding: 30px 8px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .ava {
+        margin: 0 8px;
+    }
+
+    .time {
+        font-size: 10px;
+        position: absolute;
+        bottom: 7px;
+    }
+
+    .text {
+        max-width: 100px;
+        font-size: 12px;
+    }
+
+    .name {
+        margin: 0 8px;
+    }
+    
 }

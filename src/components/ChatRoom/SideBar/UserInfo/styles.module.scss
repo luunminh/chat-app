@@ -36,3 +36,11 @@
     background: rgb(52, 147, 243);
 
 }
+
+@media (max-width: 768px) {
+
+    .logoutBtn,
+    .userNameText {
+        font-size: 12px;
+    }
+}

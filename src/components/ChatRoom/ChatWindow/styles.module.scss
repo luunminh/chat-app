@@ -113,3 +113,84 @@
 .btnSend:hover {
     background: rgb(52, 147, 243);
 }
+
+.menuBtn {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    display: none;
+}
+
+
+@media (max-width: 1023px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .roomName {
+        font-size: 19px;
+    }
+
+    .roomDesc {
+        font-size: 12px;
+    }
+    .msgForm {
+        padding: 15px 20px;
+    }
+
+    .inputMsg {
+        font-size: 14px;
+    }
+
+    .btnSend {
+        padding: 13px 18px;
+    }
+
+
+    .rightSide {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rightSide {
+        gap: 15px;
+    }
+
+    .inviteBtn {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .leftSide {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .roomName {
+        padding: 0;
+    }
+
+    .roomDesc {
+        display: none;
+    }
+
+    .menuBtn {
+        display: block;
+        margin-right: 5px;
+        margin-left: -10px;
+    }
+    .msgForm {
+        padding: 8px 20px;
+    }
+
+    .inputMsg {
+        font-size: 14px;
+        // padding: 15px 10px;
+    }
+
+    .btnSend {
+        padding: 10px 15px;
+    }
+}

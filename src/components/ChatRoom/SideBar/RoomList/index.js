@@ -23,7 +23,7 @@ const PanelStyled = styled(Panel)`
 }
 `;
 export default function RoomList() {
-    const { rooms, setIsShowingModal, setSelectedRoomId } = useContext(AppContext)
+    const { rooms, setIsShowingModal, setSelectedRoomId, setIsSideMenuVisible } = useContext(AppContext)
     const handleAddRoom = () => {
         setIsShowingModal(true);
     }
@@ -35,6 +35,7 @@ export default function RoomList() {
                 {rooms.map((room) => (
                     <Typography.Link onClick={() => {
                         setSelectedRoomId(room.id)
+                        setIsSideMenuVisible(false)
                         // console.log(room);
                     }} className={styles.item} key={room.id}>{room.name}</Typography.Link>
                 ))}

@@ -1,3 +1,49 @@
 .wrap {
     background: transparent;
 }
+
+.wrapMobile {
+    background: transparent;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        display: none;
+    }
+
+    .wrapMobile {
+        background: transparent;
+        z-index: 5;
+        display: block;
+        position: relative;
+        // visibility: hidden;
+    }
+
+    .sideMenu {
+        position: absolute;
+        z-index: 5;
+        display: none;
+        animation: sideMenuAppear .3s ease-in-out forwards;
+    }
+
+    .sideMenuAppear {
+        display: block;
+    }
+
+
+}
+
+@keyframes sideMenuAppear {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+
+    }
+
+}

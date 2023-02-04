@@ -17,6 +17,8 @@ export default function AppProvider({ children }) {
 
     const [isInviteMemberVisible, setIsInviteMemberVisible] = useState(false)
 
+    const [isSideMenuVisible, setIsSideMenuVisible] = useState(true)
+
     const user = useContext(AuthContext)
     const roomsCondition = React.useMemo(() => {
         return {
@@ -52,7 +54,7 @@ export default function AppProvider({ children }) {
     return (
         <AppContext.Provider value={{
             rooms, members, isShowingModal, setIsShowingModal, selectedRoomId, setSelectedRoomId, selectedRoom, isInviteMemberVisible
-            , setIsInviteMemberVisible
+            , setIsInviteMemberVisible, isSideMenuVisible, setIsSideMenuVisible
         }}>
             {children}
         </AppContext.Provider>

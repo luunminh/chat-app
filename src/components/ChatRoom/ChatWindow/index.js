@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { Avatar, Button, Tooltip, Spin, Alert } from 'antd'
-import { UserAddOutlined } from '@ant-design/icons/lib/icons'
+import { UserAddOutlined, MenuOutlined } from '@ant-design/icons/lib/icons'
 import styles from './styles.module.scss'
 import Message from './Message'
 import { AppContext } from '../../../Context/AppProvider'
@@ -13,7 +13,7 @@ export default function ChatWindow() {
     const inputRef = useRef(null);
     const messageListRef = useRef(null)
     const { selectedRoom, members,
-        setIsInviteMemberVisible } = useContext(AppContext);
+        setIsInviteMemberVisible, isSideMenuVisible, setIsSideMenuVisible } = useContext(AppContext);
     const [inputMsg, setInputMsg] = useState('');
 
     const handleChangeInput = (e) => {
@@ -76,12 +76,15 @@ export default function ChatWindow() {
         }
     }, [messages]);
 
+
+
     return (
         <div className={styles.container}>
             {
                 selectedRoom.id ? (<>
                     <div className={styles.header}>
                         <div className={styles.leftSide}>
+                            <Button className={styles.menuBtn} onClick={() => { setIsSideMenuVisible(true) }} icon={<MenuOutlined />}></Button>
                             <p className={styles.roomName}>{(selectedRoom) ? selectedRoom.name : ''}</p>
                             <p className={styles.roomDesc}>{(selectedRoom) ? selectedRoom.description : ''}</p>
                         </div>
