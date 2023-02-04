@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/chat-app/static/css/main.e8a1defe.css",
-    "main.js": "/chat-app/static/js/main.cd005b6f.js",
+    "main.css": "/chat-app/static/css/main.54a99238.css",
+    "main.js": "/chat-app/static/js/main.8addd697.js",
     "static/js/787.6f726199.chunk.js": "/chat-app/static/js/787.6f726199.chunk.js",
     "static/media/lava-abstract-formation-8k-2560x1600.jpg": "/chat-app/static/media/lava-abstract-formation-8k-2560x1600.4119b66696a454fdf1db.jpg",
     "index.html": "/chat-app/index.html",
-    "main.e8a1defe.css.map": "/chat-app/static/css/main.e8a1defe.css.map",
-    "main.cd005b6f.js.map": "/chat-app/static/js/main.cd005b6f.js.map",
+    "main.54a99238.css.map": "/chat-app/static/css/main.54a99238.css.map",
+    "main.8addd697.js.map": "/chat-app/static/js/main.8addd697.js.map",
     "787.6f726199.chunk.js.map": "/chat-app/static/js/787.6f726199.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8a1defe.css",
-    "static/js/main.cd005b6f.js"
+    "static/css/main.54a99238.css",
+    "static/js/main.8addd697.js"
   ]
 }
